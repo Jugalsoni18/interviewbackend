@@ -39,8 +39,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Mount static files
-app.mount("/static", StaticFiles(directory="static"), name="static")
+
 
 # Get API key from environment variable
 API_KEY = os.environ.get('GOOGLE_API_KEY')
