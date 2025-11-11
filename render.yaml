@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: interview-ai-backend
+    env: python
+    rootDir: INTERVIEW AI
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn web_app:app
+    envVars:
+      - key: GOOGLE_API_KEY
+        sync: false
+      - key: FLASK_ENV
+        value: production
