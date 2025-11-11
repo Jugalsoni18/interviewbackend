@@ -1,29 +1,17 @@
-# Flask and Web Framework
-Flask==3.0.3
-flask-cors==4.0.1
-gunicorn==22.0.0
-Werkzeug==3.0.3
+# FastAPI and ASGI Server
+fastapi==0.115.0
+uvicorn[standard]==0.31.0
+aiofiles==24.1.0
 
-# Environment Variables
-python-dotenv==1.0.1
-
-# Google Generative AI (Gemini)
+# Google Generative AI
 google-generativeai==0.8.3
 
 # Text-to-Speech
 gTTS==2.5.3
 
-# Audio Processing
-pydub==0.25.1
-SpeechRecognition==3.10.4
-
-# Computer Vision (for FaceMonitor - optional if you remove it)
-opencv-python-headless==4.10.0.84
-mediapipe==0.10.14
-
-# HTTP Requests
-requests==2.32.3
+# Environment Variables
+python-dotenv==1.0.1
 
 # Utilities
-Pillow==10.4.0
-numpy==1.26.4
+requests==2.32.3
+python-multipart==0.0.9  # For file uploads

@@ -2,11 +2,17 @@ services:
   - type: web
     name: interview-ai-backend
     env: python
-    rootDir: INTERVIEW AI
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn web_app:app
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    plan: free
+    region: oregon
+    branch: main
     envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
       - key: GOOGLE_API_KEY
         sync: false
       - key: FLASK_ENV
         value: production
+    healthCheckPath: /health
+    autoDeploy: true
